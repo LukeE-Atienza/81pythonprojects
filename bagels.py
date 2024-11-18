@@ -13,7 +13,7 @@ def main():
           Try to guess what it is. Here are some clues:
           When I say:   That means:
             Pico        One digit is correct but in the wrong position.
-            Fermi       One digit is correect and in the right position.
+            Fermi       One digit is correct and in the right position.
             Bagels      No digit is correct.
           
           For example, if the secret number was 248 and your guess was 843, the clues would be Fermi Pico.'''.format(num_digits))
