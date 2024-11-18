@@ -64,6 +64,24 @@ def getSecretNum():
 def getClues(guess, secretNum):
     # Returns a string of Pico, Fermi, or Bagels clues for a guess and secret number pair
 
-    if guess == ""
+    if guess == secretNum:
+        return 'You got it!'
+    
+    clues = [] #creates a list called clues. 
 
+    for i in range(len(guess)):
+        if guess[i] == secretNum[i]:
+            # condition for if a digit is in the correct place 
+            clues.append('Fermi') # note: the append method adds a single element to the end of a list
+        elif guess[i] in secretNum:
+            # condition for if a correct digit is in the incorrect place
+            clues.append('Pico')
+    if len(clues) == 0:
+        # condition for if there no correct digits at all
+        return 'Bagels'
+    else:
+        clues.sort() #this sorts clues into alphabetical order so that the original order doesn't help the user mroe than it needs to... lol
+        return ' '.join(clues)
 
+if __name__ == '__main__':
+    main()
