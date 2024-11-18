@@ -1,6 +1,7 @@
 """
 Deductive logic game that gives cluses so user can guess a three digit number
 """
+import random
 
 #initialize variables
 num_digits = 3
@@ -47,7 +48,22 @@ def main():
         print('Do you want to play again? (yes or no)')
         if not input('> ').lower().startswith('y'):
             break
-        print('Thanks for playing!')
+        print('Thanks for playing!')  
 
 def getSecretNum():
-    print()
+    # returns string of made up of NUM_DIGITs unique digits
+    numbers = list('0123456789') # creates a list of digits from 0-9
+    random.shuffle(numbers) #shuffles numbers; also note we have to import random
+
+    secretNum = ''
+    for i in range(num_digits):
+        secretNum += str(numbers[i])
+    return secretNum
+
+
+def getClues(guess, secretNum):
+    # Returns a string of Pico, Fermi, or Bagels clues for a guess and secret number pair
+
+    if guess == ""
+
+
