@@ -24,3 +24,27 @@ def getMatch(birthdays):
         for b, birthdayB in enumerate(birthdays[a + 1 :]):
             if birthdayA == birthdayB:
                 return birthdayA # returns the matching birthday
+
+#Display intro
+print(''' 
+The Birthday Paradox shows us that in a group of N people, the odds 
+that two of them have matching birthdays is surprisingly large.
+This program does a Monte Carlo simulation (repeated random
+simulations) to explore this concept. 
+
+(This is not actually a paradox, but just a surprising result.)
+''')
+
+#Set up tuple of month names in order
+months = ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
+
+while True:
+    print('How many birthdays shall I generate? (Max 100)')
+    response = input('> ')
+    if response.isdecimal() and (0 < int(response) <= 100):
+        numBDays = int(response)
+        break # User has entered valid amount 
+print()
+
+#
+
