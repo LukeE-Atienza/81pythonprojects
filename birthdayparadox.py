@@ -46,5 +46,18 @@ while True:
         break # User has entered valid amount 
 print()
 
-#
+#Generation and display of birthdays
+print('Here are', numBDays, 'birthdays:')
+birthdays = getBirthdays(numBDays)
+for i, birthday in enumerate(birthdays):
+    if i != 0:
+        # This loop puts a comma after each birthday
+        print(', ', end='')
+    monthName = months[birthday.month - 1]
+    dateText = '{} {}'.format(monthName, birthday.day)
+    print(dateText, end='')
+print()
+print()
+
+
 
